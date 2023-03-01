@@ -23,3 +23,7 @@ const closedModal = function () {
 
 closeModal.addEventListener('click', closedModal)
 overlay.addEventListener('click', closedModal)
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closedModal()
+})
