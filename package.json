@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "scp -P 22123 ./* vanesa@vanesa.certweb.infenlaces.com:/home/vanesa/ventanas-modales"
   },
   "author": "",
   "license": "ISC",
