@@ -1,6 +1,7 @@
 const overlay = document.querySelector('.overlay')
 const closeModal = document.querySelector('.close-modal')
 const modal = document.querySelector('.modal')
+//const showModal = document.querySelectorAll(#botones)
 const showModal = document.querySelectorAll('.show-modal')
 
 const openModal = function () {
@@ -25,5 +26,8 @@ closeModal.addEventListener('click', closedModal)
 overlay.addEventListener('click', closedModal)
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') closedModal()
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closedModal()
+  }
+  e.stopPropagation()
 })
